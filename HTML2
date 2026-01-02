@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio - Khawla Bayou</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f6f8;
+      direction: rtl;
+    }
+
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #1e3a8a;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    ul {
+      list-style: square;
+    }
+
+    form input, form textarea, form button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+    }
+
+    button {
+      background-color: #1e3a8a;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #e5e7eb;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>خولة بايو</h1>
+  <p>طالبة ذكاء اصطناعي | مهتمة بالتكنولوجيا والتسويق الرقمي</p>
+  <nav>
+    <a href="#about">نبذة</a>
+    <a href="#skills">المهارات</a>
+    <a href="#education">التعليم</a>
+    <a href="#contact">تواصل</a>
+  </nav>
+</header>
+
+<section id="about" class="card">
+  <h2>نبذة عني</h2>
+  <p>
+    أنا طالبة ذكاء اصطناعي، متعددة المهارات، أتميز بالمرونة، العمل الجماعي،
+    وحب التعلم المستمر، وأسعى لتطوير نفسي في مجالات التكنولوجيا الحديثة.
+  </p>
+</section>
+
+<section id="skills" class="card">
+  <h2>المهارات</h2>
+  <ul>
+    <li>العمل ضمن فريق</li>
+    <li>التواصل الفعال</li>
+    <li>إدارة الوقت</li>
+    <li>التسويق الرقمي</li>
+    <li>أساسيات البرمجة</li>
+  </ul>
+</section>
+
+<section id="education" class="card">
+  <h2>التعليم</h2>
+  <p>🎓 Bac+2 في الذكاء الاصطناعي – قيد الدراسة</p>
+  <p>🎓 Bac علوم فيزيائية – 2021</p>
+</section>
+
+<section id="contact" class="card">
+  <h2>نموذج التواصل</h2>
+
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="اسمك" required>
+    <input type="email" id="email" placeholder="بريدك الإلكتروني" required>
+    <textarea id="message" placeholder="رسالتك"></textarea>
+    <button type="submit">إرسال</button>
+  </form>
+
+  <p id="result"></p>
+</section>
+
+<footer>
+  © 2026 - Portfolio Website
+</footer>
+
+<script>
+  const form = document.getElementById("contactForm");
+  const result = document.getElementById("result");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+
+    result.textContent = "شكرًا لك " + name + "، تم إرسال رسالتك بنجاح!";
+    result.style.color = "green";
+
+    form.reset();
+  });
+</script>
+
+</body>
+</html>
+
